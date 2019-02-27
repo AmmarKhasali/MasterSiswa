@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        fragment = new TampilSiswaFragment();
+        fragment = new ShowStudentsFragment();
         showFragment(fragment);
     }
 
@@ -93,8 +93,12 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_camera) {
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
+            fragment = new ShowStudentsFragment();
+            showFragment(fragment);
 
         } else if (id == R.id.nav_slideshow) {
+            fragment = new ShowClassesFragment();
+            showFragment(fragment);
 
         } else if (id == R.id.nav_manage) {
 
